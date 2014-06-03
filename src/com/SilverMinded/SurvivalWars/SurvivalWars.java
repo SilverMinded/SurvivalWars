@@ -11,6 +11,7 @@ import org.bukkit.plugin.java.JavaPluginLoader;
 
 import com.SilverMinded.SurvivalWars.Commands.Commands;
 import com.SilverMinded.SurvivalWars.Events.JoinServerEvent;
+import com.SilverMinded.SurvivalWars.Game.CountDown;
 
 public class SurvivalWars extends JavaPlugin {
 
@@ -34,10 +35,24 @@ public class SurvivalWars extends JavaPlugin {
 	@EventHandler
 	@Override
 	public void onEnable() {
+<<<<<<< HEAD
 		getServer().getPluginManager().registerEvents(new JoinServerEvent(),
 				this);
+=======
+		new Thread(new CountDown()).start();
+		getServer().getPluginManager().registerEvents(new JoinServerEvent(), this);
+>>>>>>> d25d1fb89abcf3a9db9becc6698404249292aea0
 		log.info(normalTitle + " Enabled");
 		getServer().getPluginCommand("quit").setExecutor(new Commands());
+	}
+	public static void start() {
+		
+		
+	}
+	
+	public static void stop() {
+		
+		
 	}
 
 }
