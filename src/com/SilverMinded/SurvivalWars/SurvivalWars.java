@@ -45,14 +45,15 @@ public class SurvivalWars extends JavaPlugin {
 
 		log.info(normalTitle + " Enabled");
 		getServer().getPluginCommand("quit").setExecutor(new Commands());
+		getServer().getPluginCommand("reset").setExecutor(new Commands());
 	}
 
 	public static void start() {
-		
+
 	}
 
 	public static void stop() {
-		
+
 	}
 
 }

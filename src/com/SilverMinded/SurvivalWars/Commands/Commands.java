@@ -13,9 +13,12 @@ public class Commands implements CommandExecutor {
 			String label, String[] args) {
 
 		if (command.getName().equalsIgnoreCase("quit")) {
+			return true;
 
-		}else if (command.getName().equalsIgnoreCase("reset")){
+		} else if (command.getName().equalsIgnoreCase("reset")) {
 			Status.setStatus(Status.RESETTING);
+			return true;
+
 		}
 
 		return false;
