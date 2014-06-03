@@ -1,11 +1,15 @@
 package com.SilverMinded.SurvivalWars.Managers;
 
+
 import com.SilverMinded.SurvivalWars.Game.Team;
 
 public class TeamManager extends Team{
 	
 	int blueplayernumber;
 	int redplayernumber;
+	public static String teamname;
+			
+	
 	
 	
 	
