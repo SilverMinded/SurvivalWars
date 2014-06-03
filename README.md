@@ -1,0 +1,4 @@
+SurvivalWars
+============
+
+The SurvivalWars Plugin!
