@@ -11,7 +11,7 @@ public class CountDown implements Runnable {
 	// Checkt hoeveel tijd je moet wachten tot volgend potje zegmaar
 	public void run() {
 		timeUntilStart = 120;
-		while (true) {
+		while (Status.isStatus(Status.IN_LOBBY)) {
 			for (; timeUntilStart >= 0; timeUntilStart--) {
 				if (timeUntilStart == 0) {
 					// Hier begint de game
