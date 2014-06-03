@@ -9,7 +9,7 @@ public class CountDown implements Runnable{
 	private static int timeUntilStart;
 	//Checkt hoeveel tijd je moet wachten tot volgend potje zegmaar
 	public void run() {
-		timeUntilStart = 60;
+		timeUntilStart = 120;
 		while (true) {
 			for(; timeUntilStart >= 0; timeUntilStart--) {
 				if (timeUntilStart == 0) {
