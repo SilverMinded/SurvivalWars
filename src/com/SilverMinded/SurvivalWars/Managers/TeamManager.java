@@ -4,12 +4,15 @@ import com.SilverMinded.SurvivalWars.Game.Team;
 
 public class TeamManager extends Team{
 	
-	int blueplayers;
-	int redplayers;
+	int blueplayernumber;
+	int redplayernumber;
+	
+	
+	
 	
 	public static boolean getTeamWithLessPlayers;{
 		
-		if(blueplayers < redplayers){
+		if(blueplayernumber < redplayernumber){
 			//Hier voeg je de player toe aan team rood en else: aan team blue (andersom xD )
 			
 			
