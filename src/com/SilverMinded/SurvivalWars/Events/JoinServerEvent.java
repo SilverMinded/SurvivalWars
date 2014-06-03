@@ -21,18 +21,17 @@ public class JoinServerEvent implements Listener {
 
 		p.getName();
 	}
-	
+
 	@EventHandler
-	public void playerQuit(PlayerQuitEvent e){
-		
+	public void playerQuit(PlayerQuitEvent e) {
+
 	}
-	
+
 	@EventHandler
-	public void levelUp(PlayerLevelChangeEvent e){
-		
+	public void levelUp(PlayerLevelChangeEvent e) {
+
 		e.getPlayer().sendMessage("So, you levelled up?");
 		e.getPlayer().sendMessage("Or lost a level?");
 	}
-	
 
 }

@@ -48,11 +48,11 @@ public class SurvivalWars extends JavaPlugin {
 	}
 
 	public static void start() {
-
+		
 	}
 
 	public static void stop() {
-
+		
 	}
 
 }
