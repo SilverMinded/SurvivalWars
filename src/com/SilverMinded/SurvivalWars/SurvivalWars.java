@@ -17,13 +17,11 @@ public class SurvivalWars extends JavaPlugin {
 	public static String normalTitle = "[SurvivalWars]";
 
 	public SurvivalWars() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public SurvivalWars(JavaPluginLoader loader,
 			PluginDescriptionFile description, File dataFolder, File file) {
 		super(loader, description, dataFolder, file);
-		// TODO Auto-generated constructor stub
 	}
 	
 	@EventHandler
@@ -31,6 +29,7 @@ public class SurvivalWars extends JavaPlugin {
 	public void onEnable() {
 		log.info(normalTitle + " Enabled");
 		super.onEnable();
+		log.info( normalTitle + " This plugin was created by Julius and Chris ");
 	}
 
 }
