@@ -9,6 +9,8 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.JavaPluginLoader;
 
+import com.SilverMinded.SurvivalWars.Events.JoinServerEvent;
+
 public class SurvivalWars extends JavaPlugin {
 	
 	public static Logger log = Logger.getLogger("Minecraft");
@@ -33,6 +35,7 @@ public class SurvivalWars extends JavaPlugin {
 	@EventHandler
 	@Override
 	public void onEnable() {
+		getServer().getPluginManager().registerEvents(new JoinServerEvent(), this);
 		log.info(normalTitle + " Enabled");
 		super.onEnable();
 	}
