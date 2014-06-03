@@ -41,5 +41,14 @@ public class SurvivalWars extends JavaPlugin {
 		log.info(normalTitle + " Enabled");
 		super.onEnable();
 	}
+	public static void start() {
+		
+		
+	}
+	
+	public static void stop() {
+		
+		
+	}
 
 }
