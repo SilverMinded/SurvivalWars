@@ -9,17 +9,16 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.JavaPluginLoader;
 
+import com.SilverMinded.SurvivalWars.Commands.Commands;
 import com.SilverMinded.SurvivalWars.Events.JoinServerEvent;
 
 public class SurvivalWars extends JavaPlugin {
-	
+
 	public static Logger log = Logger.getLogger("Minecraft");
 	public static String title = ChatColor.WHITE + "[" + ChatColor.DARK_GREEN
 			+ "SurvivalWars" + ChatColor.WHITE + "]";
 	public static String normalTitle = "[SurvivalWars]";
-	
-	
-	
+
 	public static SurvivalWars instance;
 
 	public SurvivalWars() {
@@ -31,13 +30,14 @@ public class SurvivalWars extends JavaPlugin {
 		super(loader, description, dataFolder, file);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@EventHandler
 	@Override
 	public void onEnable() {
-		getServer().getPluginManager().registerEvents(new JoinServerEvent(), this);
+		getServer().getPluginManager().registerEvents(new JoinServerEvent(),
+				this);
 		log.info(normalTitle + " Enabled");
-		super.onEnable();
+		getServer().getPluginCommand("quit").setExecutor(new Commands());
 	}
 
 }
