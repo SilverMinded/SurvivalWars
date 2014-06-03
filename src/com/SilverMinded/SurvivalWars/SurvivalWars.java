@@ -31,6 +31,7 @@ public class SurvivalWars extends JavaPlugin {
 	public void onEnable() {
 		log.info(normalTitle + " Enabled");
 		super.onEnable();
+		log.info( normalTitle + " This plugin was created by Julius and Chris ");
 	}
 
 }
