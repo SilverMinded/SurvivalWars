@@ -14,12 +14,12 @@ public class JoinServerEvent implements Listener {
 	@EventHandler
 	public void playerJoin(PlayerJoinEvent e) {
 
-		e.setJoinMessage("Hello, You have been added to team: "
-				+ TeamManager.teamname);
+		
 
 		Player p = e.getPlayer();
 
 		p.getName();
+		p.sendMessage("Hello, you have been added to team: " + TeamManager.teamname);
 	}
 
 	@EventHandler

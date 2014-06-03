@@ -7,4 +7,10 @@ authors: [J0que_, Testyflesty]
 website: https://github.com/SilverMinded/SurvivalWars
 
 commands: 
-  
+  quit:
+    description: nope
+    usage: nope
+    
+  reset:
+    description: Reset the server
+    usage: /reset
