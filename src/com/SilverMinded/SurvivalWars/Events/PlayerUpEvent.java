@@ -9,7 +9,7 @@ public class PlayerUpEvent {
 	@EventHandler
 	public void levelUp(PlayerLevelChangeEvent e) {
 
-		e.getPlayer().sendMessage(SurvivalWars.title + "You levelled up");
+		e.getPlayer().sendMessage(SurvivalWars.title + " You levelled up");
 
 	}
 }
