@@ -27,7 +27,6 @@
   <target name="dist" depends="compile"
         description="generate the distribution" >
   	<echo message="Building"/>
-    <mkdir dir="${dist}/lib"/>
     
     <jar jarfile="${dist}/${label}.jar" basedir="${build}"/>
   </target>
