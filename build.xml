@@ -9,15 +9,24 @@
 
   <target name="init">
     <mkdir dir="${build}"/>
+  	<mkdir dir="lib"/>
+  	<echo message="Downloading Bukkit"/>
+  	<get dest="lib/bukkit.jar" src="http://dl.bukkit.org/downloads/bukkit/get/02630_1.7.9-R0.2/bukkit-beta.jar"/>
   </target>
 
   <target name="compile" depends="init"
         description="compile the source " >
-    <javac srcdir="${src}" destdir="${build}"/>
+  	<echo message="Compiling"/>
+    <javac srcdir="${src}" destdir="${build}" includeantruntime="false">
+    <classpath>
+    	<pathelement location="lib/bukkit.jar"/>
+</classpath>
+    </javac>
   </target>
 
   <target name="dist" depends="compile"
         description="generate the distribution" >
+  	<echo message="Building"/>
     <mkdir dir="${dist}/lib"/>
     
     <jar jarfile="${dist}/${label}" basedir="${build}"/>
