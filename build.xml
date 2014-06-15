@@ -29,7 +29,7 @@
   	<echo message="Building"/>
     <mkdir dir="${dist}/lib"/>
     
-    <jar jarfile="${dist}/${label}" basedir="${build}"/>
+    <jar jarfile="${dist}/${label}.jar" basedir="${build}"/>
   </target>
 
   <target name="clean"
