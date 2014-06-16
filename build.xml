@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Please don't change unless explicitly necessary-->
 <project name="SurvivalWars" default="dist" basedir=".">
 
   <property environment="env"/>
