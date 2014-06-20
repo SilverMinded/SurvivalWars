@@ -19,7 +19,7 @@ public class SurvivalWars extends JavaPlugin {
 			+ "SurvivalWars" + ChatColor.WHITE + "]";
 	public static String normalTitle = "[SurvivalWars]";
 
-	public static SurvivalWars instance;
+
 
 	@EventHandler
 	@Override
