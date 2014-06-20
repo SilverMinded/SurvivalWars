@@ -2,38 +2,38 @@
 <!--Please don't change unless explicitly necessary-->
 <project name="SurvivalWars" default="dist" basedir=".">
 
-  <property environment="env"/>
-  <property name="label" value="${env.JOB_NAME}-${env.BUILD_NUMBER}"/>
-  <property name="src" location="src"/>
-  <property name="build" location="build"/>
-  <property name="dist"  location="dist"/>
+    <property environment="env"/>
+    <property name="label" value="${env.JOB_NAME}-${env.BUILD_NUMBER}"/>
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    <property name="dist" location="dist"/>
 
-  <target name="init">
-    <mkdir dir="${build}"/>
-  	<mkdir dir="lib"/>
-  	<echo message="Downloading Bukkit"/>
-  	<get dest="lib/bukkit.jar" src="http://dl.bukkit.org/downloads/bukkit/get/02630_1.7.9-R0.2/bukkit-beta.jar"/>
-  </target>
+    <target name="init">
+        <mkdir dir="${build}"/>
+        <mkdir dir="lib"/>
+        <echo message="Downloading Bukkit"/>
+        <get dest="lib/bukkit.jar" src="http://dl.bukkit.org/downloads/bukkit/get/02630_1.7.9-R0.2/bukkit-beta.jar"/>
+    </target>
 
-  <target name="compile" depends="init"
-        description="compile the source " >
-  	<echo message="Compiling"/>
-    <javac srcdir="${src}" destdir="${build}" includeantruntime="false">
-    <classpath>
-    	<pathelement location="lib/bukkit.jar"/>
-</classpath>
-    </javac>
-  </target>
+    <target name="compile" depends="init"
+            description="compile the source ">
+        <echo message="Compiling"/>
+        <javac srcdir="${src}" destdir="${build}" includeantruntime="false">
+            <classpath>
+                <pathelement location="lib/bukkit.jar"/>
+            </classpath>
+        </javac>
+    </target>
 
-  <target name="dist" depends="compile"
-        description="generate the distribution" >
-  	<echo message="Building"/>
-    
-    <jar jarfile="${dist}/${label}.jar" basedir="${build}"/>
-  </target>
+    <target name="dist" depends="compile"
+            description="generate the distribution">
+        <echo message="Building"/>
 
-  <target name="clean"
-        description="clean up" >
-    <delete dir="${build}"/>
-  </target>
+        <jar jarfile="${dist}/${label}.jar" basedir="${build}"/>
+    </target>
+
+    <target name="clean"
+            description="clean up">
+        <delete dir="${build}"/>
+    </target>
 </project>
