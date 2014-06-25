@@ -3,7 +3,8 @@
 <project name="SurvivalWars" default="dist" basedir=".">
 
     <property environment="env"/>
-    <property name="label" value="${env.JOB_NAME}-${env.BUILD_NUMBER}"/>
+    <!--<property name="label" value="${env.JOB_NAME}-${env.BUILD_NUMBER}"/>-->
+    <property name="label" value="SurvivalWars"/>
     <property name="src" location="src"/>
     <property name="build" location="build"/>
     <property name="dist" location="dist"/>
@@ -22,6 +23,7 @@
             <classpath>
                 <pathelement location="lib/bukkit.jar"/>
             </classpath>
+
         </javac>
     </target>
 
@@ -29,7 +31,9 @@
             description="generate the distribution">
         <echo message="Building"/>
 
-        <jar jarfile="${dist}/${label}.jar" basedir="${build}"/>
+        <jar jarfile="${dist}/${label}.jar" basedir="${build}">
+            <fileset file="src/plugin.yml"/>
+        </jar>
     </target>
 
     <target name="clean"
