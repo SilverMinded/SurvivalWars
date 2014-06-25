@@ -80,3 +80,14 @@ com_crashlytics_export_strings.xml
 build/
 dist/
 lib/
+
+# Gradle Files #
+################
+.gradle
+.m2
+
+# Build output directies
+/target
+*/target
+/build
+*/build
