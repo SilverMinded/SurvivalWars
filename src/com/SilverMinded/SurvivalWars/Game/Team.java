@@ -1,9 +1,11 @@
 package com.SilverMinded.SurvivalWars.Game;
 
-public class Team {
+public enum Team {
 	
-	public String red;
-	public String blue;
-	
+	blue,
+    red,
+    yellow,
+    purple
+
 
 }
