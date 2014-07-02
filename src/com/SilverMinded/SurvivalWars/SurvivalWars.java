@@ -18,10 +18,12 @@ public class SurvivalWars extends JavaPlugin {
             + "SurvivalWars" + ChatColor.WHITE + "]";
     public static String normalTitle = "[SurvivalWars]";
 
+    //Starting the Server
     public static void start() {
 
     }
 
+    //Stopping the Server
     public static void stop() {
 
     }
