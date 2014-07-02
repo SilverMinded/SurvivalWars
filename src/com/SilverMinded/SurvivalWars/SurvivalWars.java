@@ -1,50 +1,47 @@
 package com.SilverMinded.SurvivalWars;
 
-import java.util.logging.Logger;
-
-import org.bukkit.ChatColor;
-import org.bukkit.event.EventHandler;
-import org.bukkit.plugin.java.JavaPlugin;
-
 import com.SilverMinded.SurvivalWars.Commands.Commands;
 import com.SilverMinded.SurvivalWars.Events.JoinServerEvent;
 import com.SilverMinded.SurvivalWars.Events.LeaveServerEvent;
 import com.SilverMinded.SurvivalWars.Events.PlayerUpEvent;
 import com.SilverMinded.SurvivalWars.Game.CountDown;
+import org.bukkit.ChatColor;
+import org.bukkit.event.EventHandler;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.logging.Logger;
 
 public class SurvivalWars extends JavaPlugin {
 
-	public static Logger log = Logger.getLogger("Minecraft");
-	public static String title = ChatColor.WHITE + "[" + ChatColor.DARK_GREEN
-			+ "SurvivalWars" + ChatColor.WHITE + "]";
-	public static String normalTitle = "[SurvivalWars]";
+    public static Logger log = Logger.getLogger("Minecraft");
+    public static String title = ChatColor.WHITE + "[" + ChatColor.DARK_GREEN
+            + "SurvivalWars" + ChatColor.WHITE + "]";
+    public static String normalTitle = "[SurvivalWars]";
 
+    public static void start() {
 
+    }
 
-	@EventHandler
-	@Override
-	public void onEnable() {
+    public static void stop() {
 
-		getServer().getPluginManager().registerEvents(new JoinServerEvent(),
-				this);
+    }
 
-		new Thread(new CountDown()).start();
-		getServer().getPluginManager().registerEvents(new PlayerUpEvent(),
-				this);
-		getServer().getPluginManager().registerEvents(new LeaveServerEvent(),
-				this);
+    @EventHandler
+    @Override
+    public void onEnable() {
 
-		log.info(normalTitle + " Enabled");
-		getServer().getPluginCommand("quit").setExecutor(new Commands());
-		getServer().getPluginCommand("reset").setExecutor(new Commands());
-	}
+        getServer().getPluginManager().registerEvents(new JoinServerEvent(),
+                this);
 
-	public static void start() {
+        new Thread(new CountDown()).start();
+        getServer().getPluginManager().registerEvents(new PlayerUpEvent(),
+                this);
+        getServer().getPluginManager().registerEvents(new LeaveServerEvent(),
+                this);
 
-	}
-
-	public static void stop() {
-
-	}
+        log.info(normalTitle + " Enabled");
+        getServer().getPluginCommand("quit").setExecutor(new Commands());
+        getServer().getPluginCommand("reset").setExecutor(new Commands());
+    }
 
 }

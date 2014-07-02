@@ -1,11 +1,10 @@
-package com.SilverMinded.SurvivalWars.Game;
+package com.SilverMinded.SurvivalWars.Team;
 
 public enum Team {
-	
-	blue,
+
+    blue,
     red,
     yellow,
     purple
-
 
 }
